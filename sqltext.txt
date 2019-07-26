@@ -1,0 +1,123 @@
+-- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+--
+-- Host: localhost    Database: finaltest
+-- ------------------------------------------------------
+-- Server version	8.0.16
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8mb4 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `finaltest`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `finaltest` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `finaltest`;
+
+--
+-- Table structure for table `book`
+--
+
+DROP TABLE IF EXISTS `book`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `book` (
+  `Bid` bigint(13) NOT NULL COMMENT 'ISBN',
+  `Bname` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `author` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `publisher` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `link` text COLLATE utf8_unicode_ci NOT NULL,
+  `imagelink` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`Bid`),
+  KEY `Bname` (`Bname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='책 정보 테이블(ISBN, 제목, 작가, 출판, 링크, 메모, 평점)';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `book`
+--
+
+LOCK TABLES `book` WRITE;
+/*!40000 ALTER TABLE `book` DISABLE KEYS */;
+INSERT INTO `book` VALUES (9788954074803,'십대의 인문학 H11','저자 : 김소월','(주)대교','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9788954074803',''),(9788957752005,'아이디어가 이렇게 재산이 될 줄이야','김태수 지음','이코노믹북스','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9788957752005',''),(9788983925558,'해리포터와 마법사의 돌','J.K. 롤링 저; 김혜원 역','(도서출판)문학수첩','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9788983925558',''),(9788991918719,'님의 침묵','지은이: 한용운','푸른생각','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9788991918719','http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/2019/04/09/9788991918719.jpg'),(9791109008882,'무영비가위 45화','저자 : 야설록','미스터블루(주식회사)','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791109008882',''),(9791161727189,'소크라테스의 변론, 크리톤','플라톤 지음 ;이진희 풀어씀','풀빛','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791161727189','http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/6729411_3.jpg'),(9791161727233,'소크라테스의 변론, 크리톤','원작자 : 플라톤;저자 : 이진희;','(도서출판)풀빛','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791161727233','http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/7046143_3.jpg'),(9791163108313,'정치학 - 아리스토텔레스 (The Politics) - 고품격 영문판','저자 : 아리스토텔레스(Aristotles)','(주)유페이퍼','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791163108313',''),(9791164380060,'백종원의 혼밥 메뉴','저자 : 백종원','(도서출판 주)서울문화사','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791164380060',''),(9791189413941,'이상 작품집','저자 : 이상','(주식회사)자화상','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791189413941','/http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/2019/06/24/9791189413941.jpg'),(9791189604462,'김소월 시집','지은이: 김소월','리플레이 :정씨책방','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791189604462','http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/2019/04/10/9791189604462.jpg'),(9791190203081,'쉽게 쓰여진 시','저자 : 윤동주','(도서출판)새별','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791190203081',''),(9791196630607,'출판사 차릴래요!','저자 : 진하하하하','Dreaming Dreamers','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791196630607','http://seoji.nl.go.kr/fu/ecip/dbfiles/CIP_FILES_TBL/2019/02/22/9791196630607.png'),(9791196737504,'잠들기 전 김소월','저자 : 김소월','(도서출판)큰뜰','https://book.naver.com/search/search.nhn?sm=sta_hty.book&sug=&where=nexearch&query=9791196737504','');
+/*!40000 ALTER TABLE `book` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `recordedbooks`
+--
+
+DROP TABLE IF EXISTS `recordedbooks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `recordedbooks` (
+  `Uid` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'User ID',
+  `Bid` bigint(13) NOT NULL COMMENT 'ISBN',
+  `wORh` tinyint(1) NOT NULL COMMENT '0 is w, 1 is h',
+  `regDate` date NOT NULL,
+  `score` double DEFAULT NULL,
+  `memo` text COLLATE utf8_unicode_ci,
+  KEY `FK_recordedbooks_user` (`Uid`),
+  KEY `FK_recordedbooks_book` (`Bid`),
+  CONSTRAINT `FK_recordedbooks_book` FOREIGN KEY (`Bid`) REFERENCES `book` (`Bid`),
+  CONSTRAINT `FK_recordedbooks_user` FOREIGN KEY (`Uid`) REFERENCES `user` (`Uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='유저에 의해서 등록된 책들 정보';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `recordedbooks`
+--
+
+LOCK TABLES `recordedbooks` WRITE;
+/*!40000 ALTER TABLE `recordedbooks` DISABLE KEYS */;
+INSERT INTO `recordedbooks` VALUES ('bsy1221',9788983925558,1,'2019-06-24',0,''),('bsy1221',9791161727233,1,'2019-06-24',8,'제일 처음 읽게 된 철학책'),('asdfg',9788957752005,1,'2019-06-24',0,''),('asdfg',9791109008882,0,'2019-06-24',0,''),('polyshit',9791164380060,0,'2019-06-24',0,''),('bsy1221',9791189413941,0,'2019-06-26',0,''),('bsy1221',9791190203081,0,'2019-06-26',0,''),('bsy1221',9788991918719,0,'2019-06-26',0,''),('bsy1221',9791189604462,0,'2019-06-26',0,'');
+/*!40000 ALTER TABLE `recordedbooks` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `user` (
+  `Uid` varchar(15) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'index',
+  `encryptedPwd` bigint(20) NOT NULL,
+  `Uname` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `birth` text COLLATE utf8_unicode_ci NOT NULL,
+  `setNum` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `regDate` date NOT NULL,
+  PRIMARY KEY (`Uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='유저 테이블';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('asdfg',-1457431154289,'asdfg','19941011','000000','2019-06-24'),('bsy1221',-1490186838261,'배성열','19931221','000000','2019-06-24'),('polyshit',623030099802,'홍길동','19901017','000000','2019-06-24');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-06-27  9:12:00
