@@ -10,8 +10,6 @@ import java.sql.ResultSet;
 
 import org.json.simple.JSONObject;
 
-import finaltest.MainFrameForm.worksWindow;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -19,12 +17,12 @@ import javax.swing.table.DefaultTableModel;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 public class SearchBookForm extends JFrame implements ActionListener, MouseListener {
 
+	/**			책 검색을 위한 폼			**/
+	
 	private JPanel contentPane;
 	JPanel lowButtonBox, highButtonBox;
 	JComboBox categori_CB;

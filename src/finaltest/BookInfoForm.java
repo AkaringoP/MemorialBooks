@@ -5,7 +5,6 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.io.StringReader;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.sql.Connection;
@@ -13,8 +12,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -29,12 +26,10 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
-import finaltest.MainFrameForm.worksWindow;
-
-import org.w3c.dom.Element;
-
 public class BookInfoForm extends JDialog implements ActionListener, MouseListener, KeyListener {
 
+	/**			책 세부 정보 및 사용자 기록 조회					 **/
+	
 	private JPanel contentPane;
 	private JTextField wR_author_TF;
 	private JTextField wR_publisher_TF;

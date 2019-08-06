@@ -3,7 +3,6 @@ package finaltest;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
 import javax.swing.table.TableModel;
 
 import java.awt.*;
@@ -14,9 +13,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.GregorianCalendar;
-
-import java.util.List;
-import java.util.ArrayList;
 
 public class MainFrameForm extends JFrame implements ActionListener, MouseListener {
 
